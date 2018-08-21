@@ -1,0 +1,33 @@
+// finding LCM
+		ORG 8100H
+		
+		MOV DPTR,#9000H
+		MOV A,#7H
+		MOVX @DPTR,A
+		INC DPTR
+		MOV A,#3H
+		MOVX @DPTR,A
+		
+		MOV R1,#0H
+		
+		
+LOOP:	INC R1
+		MOV DPTR,#9000H
+		MOV B,R1
+		MOVX A,@DPTR
+		INC DPTR
+		MUL AB
+		MOV R2,#0H
+		MOV R2,A
+		MOVX A,@DPTR
+		MOV B,A
+		MOV A,R2
+		DIV AB
+		MOV A,B
+		JNZ LOOP
+		
+		INC DPTR
+		MOV A,R2
+		MOVX @DPTR,A
+		
+		END
