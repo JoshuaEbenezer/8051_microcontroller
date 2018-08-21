@@ -1,5 +1,5 @@
 //Finding second largest of 100 numbers 
-
+AUTHORS: KAUSTAV BRAHMA, JOSHUA EBENEZER
 
 		ORG 8100H
 
